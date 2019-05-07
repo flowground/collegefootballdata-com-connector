@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "conference": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

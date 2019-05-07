@@ -1,0 +1,272 @@
+{
+    "title": "College Football Data",
+    "description": "This is an API for accessing all sorts of college football data.  It currently has a wide array of data ranging from play by play to player statistics to game scores and more.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/collegefootballdata.com/1.1.1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.collegefootballdata.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getCoaches": {
+            "main": "./lib/actions/getCoaches.js",
+            "title": "Get coach records and school history",
+            "description": "Coaching history",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCoaches.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getConferences": {
+            "main": "./lib/actions/getConferences.js",
+            "title": "Get conference list",
+            "description": "Conferences",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getConferences.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getDrvies": {
+            "main": "./lib/actions/getDrvies.js",
+            "title": "Get drive information",
+            "description": "Drive results",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getDrvies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGames": {
+            "main": "./lib/actions/getGames.js",
+            "title": "Get game information",
+            "description": "Game results",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGames.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPlayerGameStats": {
+            "main": "./lib/actions/getPlayerGameStats.js",
+            "title": "Get player statistics by game",
+            "description": "Player game stats",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPlayerGameStats.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTeamGameStats": {
+            "main": "./lib/actions/getTeamGameStats.js",
+            "title": "Get team statistics by game",
+            "description": "Team game stats",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeamGameStats.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPlayTypes": {
+            "main": "./lib/actions/getPlayTypes.js",
+            "title": "Get play type list",
+            "description": "Types of plays",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPlayTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPlays": {
+            "main": "./lib/actions/getPlays.js",
+            "title": "Get play information",
+            "description": "Play results",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPlays.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRankings": {
+            "main": "./lib/actions/getRankings.js",
+            "title": "Get historical rankings and polls",
+            "description": "Poll rankings",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRankings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRoster": {
+            "main": "./lib/actions/getRoster.js",
+            "title": "Get team roster",
+            "description": "Roster data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRoster.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTalent": {
+            "main": "./lib/actions/getTalent.js",
+            "title": "Get team talent rankings",
+            "description": "Team talent composite",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTalent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTeams": {
+            "main": "./lib/actions/getTeams.js",
+            "title": "Get team information",
+            "description": "Team information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeams.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTeamMatchup": {
+            "main": "./lib/actions/getTeamMatchup.js",
+            "title": "Get matchup history",
+            "description": "Matchup history",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeamMatchup.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getVenues": {
+            "main": "./lib/actions/getVenues.js",
+            "title": "Get venue information",
+            "description": "Venues",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getVenues.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

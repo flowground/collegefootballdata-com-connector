@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "year": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

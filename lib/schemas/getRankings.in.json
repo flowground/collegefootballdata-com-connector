@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "year": {
+            "required": true,
+            "type": "integer"
+        },
+        "week": {
+            "required": false,
+            "type": "integer"
+        },
+        "seasonType": {
+            "required": false,
+            "type": "string",
+            "default": "regular"
+        }
+    }
+}

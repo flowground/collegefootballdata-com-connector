@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "firstName": {
+            "required": false,
+            "type": "string"
+        },
+        "lastName": {
+            "required": false,
+            "type": "string"
+        },
+        "team": {
+            "required": false,
+            "type": "string"
+        },
+        "year": {
+            "required": false,
+            "type": "integer"
+        },
+        "minYear": {
+            "required": false,
+            "type": "integer"
+        },
+        "maxYear": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

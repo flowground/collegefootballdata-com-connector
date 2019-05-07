@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "seasonType": {
+            "required": false,
+            "type": "string",
+            "default": "regular"
+        },
+        "year": {
+            "required": true,
+            "type": "integer"
+        },
+        "week": {
+            "required": true,
+            "type": "integer"
+        },
+        "team": {
+            "required": false,
+            "type": "string"
+        },
+        "offense": {
+            "required": false,
+            "type": "string"
+        },
+        "defense": {
+            "required": false,
+            "type": "string"
+        },
+        "conference": {
+            "required": false,
+            "type": "string"
+        },
+        "offenseConference": {
+            "required": false,
+            "type": "string"
+        },
+        "defenseConference": {
+            "required": false,
+            "type": "string"
+        },
+        "playType": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

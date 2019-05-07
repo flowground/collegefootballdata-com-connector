@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "team1": {
+            "required": true,
+            "type": "string"
+        },
+        "team2": {
+            "required": true,
+            "type": "string"
+        },
+        "minYear": {
+            "required": false,
+            "type": "integer"
+        },
+        "maxYear": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}
